@@ -1,0 +1,26 @@
+{
+  "name": "My-Groceries-List",
+  "version": "1.0.0",
+  "description": "Task: create a crud API that will work as a grocery list system. ## Features of the API:  For this project, we will have users who should have shopping lists belonging to each of them. The user should be able to create, read, update, and delete items on the lists. They should also be able to create or delete grocery lists for themselves.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nashalysf/My-Groceries-List.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nashalysf/My-Groceries-List/issues"
+  },
+  "homepage": "https://github.com/nashalysf/My-Groceries-List#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "nodemon": "^3.0.2"
+  }
+}
