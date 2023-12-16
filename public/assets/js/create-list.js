@@ -1,13 +1,13 @@
 const $addItemBtn = document.querySelector('#add-item');
 const $listForm = document.querySelector('#list-form');
-const $customToppingsList = document.querySelector('#custom-item-list');
+const $customItemList = document.querySelector('#custom-item-list');
 
-const handleAddTopping = event => {
+const handleAddItem = event => {
   event.preventDefault();
 
-  const itemValue = document.querySelector('#new-topping').value;
+  const itemValue = document.querySelector('#new-item').value;
 
-  if (!toppingValue) {
+  if (!itemValue) {
     return false;
   }
 
@@ -49,6 +49,22 @@ const handleListSubmit = event => {
   }
 
   const formData = { listName, items };
+  fetch('/api/lists', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(postResponse => {
+    alert('List created successfully!');
+    console.log(postResponse);
+  })
+  .catch(err => {
+    console.log(err);
+  });
 };
 
 $listForm.addEventListener('submit', handleListSubmit);

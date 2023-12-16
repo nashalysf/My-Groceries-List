@@ -138,7 +138,7 @@ nav a:hover {
 
 .card-header {
   color: var(--light);
-  background-color: var(--secondary);
+  background-color: var(--dark);
   padding: 0.625rem;
   margin: 0;
   /* border-radius: calc(3rem - 1px) calc(3rem - 1px) 0 0; */
